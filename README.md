@@ -2,7 +2,6 @@
 2022 C++ Programming Learning
 
 //The documents are from the sysu 2021 big data Experimental class 2022 program design ⅱ.  
-
 //( Except the code written by Xxxxic )
 
 //Warning: This resource is for academic exchange only, strictly prohibited for commercial use, please delete within 24 hours.
