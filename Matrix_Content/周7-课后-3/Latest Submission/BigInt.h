@@ -10,7 +10,7 @@ public:
     BigInt& operator=(const int& a);
     BigInt& operator+(const BigInt& num);
 };
-
+BigInt res;
 
 BigInt& BigInt::operator=(const BigInt& num)
 {
@@ -41,7 +41,7 @@ BigInt& BigInt::operator+(const BigInt& num)
     while (BigNum2.length() < len) BigNum2.push_back('0');
     //进位
     int flag;      
-    BigInt res;
+    res = 0;
     res.BigNum.assign(len + 1, '0');
     for (int i = 0; i < len; i++)
     {
