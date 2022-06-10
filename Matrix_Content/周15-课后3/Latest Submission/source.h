@@ -54,7 +54,7 @@ public:
 		return os;
 	}
 };
-//友元函数不用加作用域
+////友元函数不用加作用域
 //template<class T,class Node>
 //ostream& operator<<(ostream& os, Counter<T> const& t){
 //	for (class vector<Node>::iterator iter = t.a.begin(); iter != t.a.end(); iter++) {
@@ -62,14 +62,3 @@ public:
 //	}
 //	return os;
 //}
-
-//1.首先在自定义类里面塞stl是丑陋的做法 下次试试用数组的做法优化下
-//2.在类外定义模板类函数 要求在接口实现中的类名称后面加入模板类参数：Counter<T>::Counter()  否则报错缺少模板参数列表
-//3.const vector作为函数形参时，要使用迭代器，必须用const_iterator，否则编译不通过。   vector<Node>::const_iterator my = test.begin()
-//4.在vs里面会遇到奇怪的问题：语法错误: 意外的令牌“标识符”，预期的令牌为“;”    原因是编译器无法识别模板中的迭代器类型，于是在迭代器前面加上class
-//class vector<Node>::const_iterator iter = t.a.begin()
-//5.vector::erase()的实质是将迭代器后面的元素全部复制一遍，往前移动一个位置
-//所以如果直接遍历删除 iter++的话会有错误 iter会变成野指针 所以用iter = a.erase(iter);返回删掉元素的下一个位置
-//6.注意vector的初始化：https://blog.csdn.net/qq_42247231/article/details/107242326?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-107242326-blog-89137520.pc_relevant_antiscanv4&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-107242326-blog-89137520.pc_relevant_antiscanv4&utm_relevant_index=3
-//7.迭代器的交换可以用std::iter_swap(iterator a,iterator b)
-//8.友元模板函数类外实现方式
