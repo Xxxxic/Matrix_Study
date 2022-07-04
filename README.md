@@ -11,3 +11,6 @@
 //Warning: This resource is for academic exchange only, strictly prohibited for commercial use, please delete within 24 hours.
 
 //警告：本资源仅供学习交流，严禁用于商业用途，请于24小时内删除。
+## 感谢Stars
+
+[![Stargazers repo roster for @Xxxxic/Matrix_Study](https://reporoster.com/stars/Xxxxic/Matrix_Study)](https://github.com/Xxxxic/Matrix_Study/stargazers)
